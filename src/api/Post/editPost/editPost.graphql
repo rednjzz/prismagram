@@ -1,0 +1,4 @@
+
+type Mutation {
+  editPost(id: String!, location: String, caption: String) :Post
+}

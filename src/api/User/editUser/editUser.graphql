@@ -1,0 +1,9 @@
+type Mutation {
+  editUser(
+    email:String,
+    avatart:String, 
+    firstName:String, 
+    lastName:String, 
+    bio:String
+  ) :User!
+}
