@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/node": "^7.7.7",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
     "@sendgrid/mail": "^6.4.0",
     "dotenv": "^8.2.0",
     "graphql-tools": "^4.0.6",
