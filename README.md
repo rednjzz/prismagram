@@ -19,3 +19,12 @@ Instagram clone with Express + Prisma
 - [ ] Upload a photos
 - [ ] Edit the photo (Delete)
 - [ ] See the feed
+
+# installation
+* docker 컨테이너 생성 (mysql + prisma)
+  - docker-compose up -d
+* prisma-client 파일 생성
+  - yarn prisma
+
+# 실행
+  - yarn dev

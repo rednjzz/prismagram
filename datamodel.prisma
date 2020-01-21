@@ -3,11 +3,11 @@ type User {
   username: String! @unique
   email: String! @unique
   avatar: String
-  firstName: String @default (value: "")
+  firstName: String @default(value: "")
   lastName: String
   bio: String
-  followers: [User!]! @relation(name: "FollowRelation")
   followings: [User!]! @relation(name: "FollowRelation")
+  followers : [User!]! @relation(name: "FollowRelation")
   posts: [Post!]! @relation(name: "UserToPost" onDelete: CASCADE)
   likes: [Like!]!
   comments: [Comment!]!
