@@ -3,12 +3,12 @@ services:
   nginx:
     container_name: node-nginx-lb
     build: ./nginx
-    links: 
-      - gql-server:gql-server
+    # links: 
+    #   - gql-server:gql-server
     ports:
       - 4000:80
-    depends_on:
-      - gql-server
+    # depends_on:
+    #   - gql-server
   prisma:
     image: prismagraphql/prisma:1.34
     restart: always
@@ -38,12 +38,12 @@ services:
       MYSQL_ROOT_PASSWORD: prisma
     volumes:
       - mysql:/var/lib/mysql
-  gql-server:
-    container_name: node-server
-    build: .
-    links: 
-      - prisma
-    ports:
-      - 4000
+  # gql-server:
+  #   container_name: node-server
+  #   build: .
+  #   links: 
+  #     - prisma
+  #   ports:
+  #     - 4000
 volumes:
   mysql:
