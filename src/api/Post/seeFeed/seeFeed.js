@@ -1,11 +1,11 @@
-import { prisma } from "../../../../generated/prisma-client";
+import { prisma } from "../../../../generated/prisma-client/prisma-schema";
 
 export default {
   Query: {
     seeFeed: async (_, __, { request, isAuthenticated }) => {
       isAuthenticated(request);
       const { user } = request;
-      const following = await prisma.user({ id: user.id }).following();
+      const following = await prisma.user({ id: user.id }).followings();
       return prisma.posts({
         where: {
           user: {
