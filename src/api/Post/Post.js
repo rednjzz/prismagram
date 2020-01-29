@@ -13,7 +13,7 @@ export default{
       return prisma.likesConnection({where: {post: {id: parent.id}}})
               .aggregate().count();
     },
-    files: parent => prisma.post({id: parent.id }).file(),
+    files: parent => prisma.post({id: parent.id }).files(),
     comments: parent => prisma.post({id: parent.id }).comment(),
     user: parent => prisma.post({id: parent.id}).user()
   }
