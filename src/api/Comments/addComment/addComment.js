@@ -4,10 +4,10 @@ import { prisma } from '../../../../generated/prisma-client';
 export default {
   Mutation: {
     addComment: async (_, args, { request }) => {
+      isAuthenticated(request);
       const { postId, text } = args;
       const { user } = request;
-
-      isAuthenticated(request);
+      
       try {
         const comment = await prisma.createComment({
           text: text,
@@ -18,6 +18,7 @@ export default {
             connect: { id: postId }
           }
         })
+        console.log(comment);
         return comment
       } catch (e) {
         throw "fail to comment the post"
