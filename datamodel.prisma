@@ -2,6 +2,7 @@ type User {
   id : ID! @id
   username: String! @unique
   email: String! @unique
+  phoneNumber: String! @unique
   avatar: String
   firstName: String @default(value: "")
   lastName: String
@@ -13,6 +14,7 @@ type User {
   comments: [Comment!]!
   rooms: [Room!]!
   loginSecret: String
+  loginSecretCode: String
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
 
