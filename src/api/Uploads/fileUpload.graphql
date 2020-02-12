@@ -1,0 +1,4 @@
+type Mutation{
+  singleUpload2(file: Upload!): File!,
+  multipleUpload (files: [Upload!]!): [File!]!
+}
